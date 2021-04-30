@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link  rel="shortcut icon" type="image/jpg" href="Favicon.png"/>
+	<title>Script Downloader</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
+	<style>
+		/* Style the navigation bar links */
+		.navbar {
+			text-align: center;
+      line-height: 0px;
+			float: left;
+      vertical-align: middle;
+			color: white;
+			text-align: center;
+			padding: 14px 20px;
+			text-decoration: none;
+		}
+		.fa{
+  cursor: context-menu;
+		}
+
+		.navbar:hover {
+			background-color: #014a1e;
+		}
+
+		body {}
+
+		.sidebar {
+			height: 100%;
+			width: 160px;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			padding-top: 16px;
+		}
+
+		.sidebar a {
+			padding: 6px 8px 6px 16px;
+			text-decoration: none;
+			font-size: 20px;
+			color: #818181;
+			display: block;
+		}
+
+		.sidebar a:hover {
+			color: #f1f1f1;
+		}
+
+		.main {
+			margin-left: 160px;
+			/* Same as the width of the sidenav */
+			padding: 0px 10px;
+		}
+
+		@media screen and (max-height: 450px) {
+			.sidebar {
+				padding-top: 15px;
+			}
+			.sidebar a {
+				font-size: 18px;
+			}
+		}
+	</style>
+
+
+	<style>
+		body {
+			background-color: #fefcff;
+			filter: blur(0px);
+			filter: invert(0%);
+		}
+
+		button {
+			background-color: green;
+			text-align: center;
+			border-radius: 0px;
+			color: white;
+			border: 8px lightblue;
+			padding: 30px 80px;
+
+
+		}
+
+		button:hover {
+			background-color: #00b300;
+		}
+
+		.hi:hover {
+			background-color: #006400;
+		}
+
+		.hello {
+			margin: auto;
+			width: 23%;
+			border: 3px solid white;
+			padding: 1px;
+			margin-left: 60%;
+			position: relative;
+			animation-name: exampleee;
+			animation-duration: 2s;
+			animation-delay: 4s;
+		}
+
+		.p3 {
+			font-family: 'Raleway', sans-serif;
+		}
+
+		.hi {
+			background-color: green;
+			border: none;
+			color: white;
+			padding: 40px 80px;
+			cursor: help;
+			font-size: 20px;
+			border-radius: 25px;
+			text-align: margin-right;
+			animation-name: example;
+			animation-duration: 1s;
+			animation-timing-function: linear;
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+
+		}
+
+		.btn {
+			background-color: DodgerBlue;
+			border: none;
+			color: white;
+			padding: 2px 7px;
+			cursor: help;
+			font-size: 20px;
+		}
+
+		.btn:hover {
+			background-color: RoyalBlue;
+		}
+
+		h1 {
+			text-align: center
+		}
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.button {
+			display: inline-block;
+			border-radius: 4px;
+			background-color: #f4511e;
+			border: none;
+			color: #FFFFFF;
+			text-align: center;
+			font-size: 28px;
+			padding: 20px;
+			width: 200px;
+			transition: all 0.5s;
+			cursor: help;
+			margin: 5px;
+		}
+
+		.button span {
+			cursor: help;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+
+		.button span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+
+		.button:hover span {
+			padding-right: 25px;
+		}
+
+		.button:hover span:after {
+			opacity: 1;
+			right: 0;
+		}
+
+		@keyframes example {
+			0% {
+				transform: scale(1.0);
+				-webkit-transform: scale(1.0);
+				/* Safari 3-8 */
+				-ms-transform: scale(1.0);
+				/* IE 9 */
+			}
+			100% {
+				transform: scale(1.25);
+				-webkit-transform: scale(1.25);
+				/* Safari 3-8 */
+				-ms-transform: scale(1.25);
+				/* IE 9 */
+			}
+		}
+
+		@keyframes exampleee {
+			0% {
+				left: 0%;
+				top: 0px;
+				animation-play-state: play;
+			}
+
+			100% {
+				left: 72%;
+				top: 0px;
+				animation-play-state: ;
+			}
+		}
+
+		.container {
+			height: 10px;
+			position: relative;
+			border: 3px solid white;
+
+
+
+		}
+
+		container:after {
+			wi content: "";
+			clear: both;
+			display: table;
+		}
+
+		center:after {
+			content: "hi";
+			clear: both;
+			display: table;
+
+		}
+
+		.center {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			height: 5 background-color: transparent;
+			/* Green background */
+			border: 2px solid transparent;
+			/* Green border */
+			color: white;
+			/* White text */
+			padding: 6px 60px;
+			/* Some padding */
+			cursor: pointer;
+			/* Pointer/hand icon */
+			float: left;
+			/* Float the buttons side by side */
+			background-color: transparent;
+
+		}
+
+		noscript {
+			color: black;
+			background-color: red;
+			border-radius: 25px;
+			animation-name: exampleeee;
+			animation-duration: 0.75s;
+			animation-timing-function: linear;
+
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+
+		}
+
+		.navbar {
+			font-family: 'Cabin', sans-serif;
+			color: white;
+			background-color: green;
+			border-radius: 25px;
+			font-size: 12px;
+			width: 5%;
+			height: 0.5cm;
+ vertical-align: middle;
+  text-shadow: 2px 2px black;
+   text-align: center;
+     margin: auto;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.io {
+			color: #808080;
+			background-color: white;
+			border-style: dotted;
+			border-color: white;
+			border: none;
+			border-radius: 0px;
+			height: 30px;
+			color: #ffffff;
+
+		}
+
+		.io:hover {
+			border-radius: 50%;
+			background-color: #f2f2f2;
+			background-color: #ffffff;
+
+		}
+
+		.pppe {
+			cursor: context-menu;
+		}
+
+		testbtn {
+			width: 5 height: 5
+		}
+
+		testbtn:after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		@keyframes exampleeee {
+			0% {
+				background-color: transparent;
+				color: transparent;
+			}
+			100% {
+				background-color: red;
+				color: black;
+			}
+		}
+
+		::-webkit-scrollbar {
+			width: 0px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5px white;
+			border-radius: 10px;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #fff;
+			border-radius: 10px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #fff;
+		}
+	</style>
+</head>
+
+<body onload="GFG_Fun()">
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<script type="text/javascript">
+    window.__be = window.__be || {};
+    window.__be.id = "60723d2720327f0007e9822d";
+    (function() {
+        var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+        be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+    })();
+</script>
+<!-- End of ChatBot code -->
+	<p id="GFG_UP" style="font-size: 19px; 
+              font-weight: bold;">
+	</p>
+
+	<p id="GFG_DOWN" style="color: red; 
+              font-size: 24px; 
+              font-weight: bold;">
+	</p>
+	<noscript>Sorry, your browser doesn't support JavaScript, or you have disabled it. Thus, you will not be able to use Script
+		Downloader as intended.</noscript>
+	<img src="Logo.png" alt="Logo" width="570" height="">
+<h1 class="p3">What Programming Languages Scripts do you want to download?</h1>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="center">
+		<div class="testbtn">
+    <button onclick="myFunction()">Python</button>
+		<button onclick="myunction()">HTML</button>
+		<button onclick="mynction()">Other...</button>
+		<h1></h1>
+		<h1></h1>
+		<h1></h1>
+		</div>
+  </div>
+</div>
+
+<script>
+function iron() {
+	location.replace("Filterpage.html")
+}
+function myFunction() {
+  location.replace("PythonScriptDownloader.html")
+}
+function myunction() {
+  location.replace("HTMLScriptDownloader.html")
+}
+function mynction() {
+  location.replace("Other.html")
+}
+function mmmyFunction() {
+  location.replace("About.html")
+}
+</script>
+<div class="navbar" onclick="mmmyFunction()" >
+ <p onclick="mmmyFunction()" class="pppe" >About</p>
+</div>
+
+<h1 style="color:green;">   
+           
+        </h1> 
+
+ <script> 
+ document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+        var el_up = document.getElementById("GFG_UP"); 
+        var el_down = document.getElementById("GFG_DOWN"); 
+        el_up.innerHTML = ""; 
+        var Name = "Sorry, your device does not fulfil the requirments/needs of the website. If you want to access it, please use a Windows, Mac or Linux."; 
+        if (navigator.userAgent.indexOf("Win") != -1) 
+        Name = ""; 
+        if (navigator.userAgent.indexOf("Mac") != -1)
+         Name = ""; 
+        if (navigator.userAgent.indexOf("Linux") != -1)
+         Name = ""; 
+        if (navigator.userAgent.indexOf("Android") != -1) Name =  
+          "Sorry, this websites requirments can not be fulfilled by Android Devices, Try using some other OS like Windows, Mac or Linux."; 
+        if (navigator.userAgent.indexOf("like Mac") != -1) Name =  
+          "Sorry, this websites requirments can not be fulfilled by Iphone/Apple Devices, Try using some other OS like Windows, Mac or Linux."; 
+  
+        function GFG_Fun() { 
+            el_down.innerHTML = Name; 
+        } 
+    </script> 
+    <br>
+</body>
+</html>
