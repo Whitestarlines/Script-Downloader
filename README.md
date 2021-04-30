@@ -1,1 +1,1 @@
-# Script-Downloader
+Please note, that all python scripts are of Python 3.9.1 and please do not use the Official Python Compiler as it will instantly run the program and not show the results. Instead use some online compiler like repl.it or OnlineGDB.
